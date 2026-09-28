@@ -18,7 +18,7 @@ No se utilizaron frameworks.
 
 ## 📁 Estructura
 
-```text
+
 Actividad3/
 ├── index.html
 ├── README.md
