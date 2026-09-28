@@ -205,3 +205,4 @@ botonAceptar.addEventListener("click", () => { fondo.remove();
     // Eliminar después de la duración 
     setTimeout(() => { toast.remove(); }, duracion); }
 
+ 
