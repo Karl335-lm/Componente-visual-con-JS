@@ -4,21 +4,21 @@ Proyecto de JavaScript que contiene componentes visuales interactivos y reutiliz
 
 ## 🎠 Componentes
 
-- **Carrusel:** permite navegar entre diferentes imágenes.
-- **Modal:** muestra información de Snoopy al presionar un botón.
-- **Toast:** muestra una notificación después de aceptar el modal.
+* **Carrusel:** permite navegar entre diferentes imágenes.
+* **Modal:** muestra información de Snoopy al presionar un botón.
+* **Toast:** muestra una notificación después de aceptar el modal.
 
 ## 🛠️ Tecnologías
 
-- HTML5
-- CSS3
-- JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 No se utilizaron frameworks.
 
 ## 📁 Estructura
 
-
+```text
 Actividad3/
 ├── index.html
 ├── README.md
@@ -27,6 +27,7 @@ Actividad3/
 ├── js/
 │   └── componennte.js
 └── img/
+```
 
 ## ✨ Características
 
@@ -35,13 +36,23 @@ Actividad3/
 * Diseño interactivo.
 * Generación dinámica mediante JavaScript.
 
-## Capturas
-![Carrusel](img/Captura de pantalla 2026-09-28 003349.png)
-![Carrusel](img/Captura de pantalla 2026-09-28 004014.png)
-![Carrusel](img/Captura de pantalla 2026-09-28 004027.png)
-![Modal](img/Captura de pantalla 2026-09-28 004036.png)
+## 📸 Capturas
 
-![Toast](img/Captura de pantalla 2026-09-28 004108.png)
+### 🎠 Carrusel
+
+![Carrusel](img/Captura%20de%20pantalla%202026-09-28%20003349.png)
+
+![Carrusel](img/Captura%20de%20pantalla%202026-09-28%20004014.png)
+
+![Carrusel](img/Captura%20de%20pantalla%202026-09-28%20004027.png)
+
+### 💜 Modal
+
+![Modal](img/Captura%20de%20pantalla%202026-09-28%20004036.png)
+
+### 🔔 Toast
+
+![Toast](img/Captura%20de%20pantalla%202026-09-28%20004108.png)
 
 
 ## 👩‍💻 Autora
