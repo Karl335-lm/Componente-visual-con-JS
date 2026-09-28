@@ -1,0 +1,448 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e6fdff;
+    color:#0F172A;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #100f0f;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CARRUSEL
+   ========================= */
+
+.carrusel {
+  position: relative;
+   margin: 30px auto;
+   overflow: hidden;
+    border-radius: 15px; 
+    background: #bcf0e4; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+   
+}
+#carrus { 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; }
+
+/* Imagen */
+
+.carrusel-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+  
+}
+
+
+/* Botones */
+
+.carrusel-anterior,
+.carrusel-siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.carrusel-anterior:hover,
+.carrusel-siguiente:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carrusel-anterior {
+    left: 15px;
+}
+
+.carrusel-siguiente {
+    right: 15px;
+}
+
+
+/* Indicadores */
+
+.carrusel-indicadores {
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.indicador:hover {
+    background: white;
+}
+
+.indicador.activo {
+    background: white;
+    transform: scale(1.2);
+}
+
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+
+    .carrusel {
+        height: 300px;
+    }
+
+    .carrusel-anterior,
+    .carrusel-siguiente {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+}
+/* ==========================================
+   MODAL
+   ========================================== */
+
+/* Fondo que cubre toda la pantalla */
+.modal-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(25, 20, 45, 0.65);
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    animation: fondoAparecer 0.3s ease;
+}
+
+
+/* Contenedor principal del modal */
+.modal {
+    position: relative;
+
+    width: 90%;
+    max-width: 450px;
+
+    padding: 35px 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f5f1ff
+    );
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 20px 50px rgba(60, 40, 120, 0.35),
+        0 0 30px rgba(108, 99, 255, 0.15);
+
+    animation: modalAparecer 0.45s
+        cubic-bezier(.17, .67, .35, 1.2);
+}
+
+
+/* Icono */
+.modal-icono {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #8b7cf6,
+        #4cc9f0
+    );
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 8px 20px rgba(108, 99, 255, 0.3);
+}
+
+
+/* Título */
+.modal h2 {
+    margin: 0 0 12px;
+
+    font-size: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #2196c9
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Texto */
+.modal p {
+    margin: 0 0 25px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* Botones */
+.modal-botones {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* Botones individuales */
+.modal-boton {
+    padding: 11px 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Efecto hover */
+.modal-boton:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Aceptar */
+.modal-aceptar {
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #4cc9f0
+    );
+
+    color: white;
+
+    box-shadow:
+        0 6px 15px rgba(108, 99, 255, 0.3);
+}
+
+
+.modal-aceptar:hover {
+    box-shadow:
+        0 8px 20px rgba(108, 99, 255, 0.45);
+}
+
+
+/* Cerrar */
+.modal-cerrar {
+    background: #eeeafd;
+
+    color: #625a91;
+}
+
+
+/* ==========================================
+   ANIMACIONES
+   ========================================== */
+
+@keyframes fondoAparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes modalAparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+/* ==========================================
+   TOAST
+   ========================================== */
+
+.toast {
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    min-width: 280px;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #4cc9f0
+    );
+
+    color: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(60, 40, 120, 0.35);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    z-index: 9999999;
+
+    animation: aparecerToast 0.4s ease;
+}
+
+
+/* Icono del Toast */
+.toast span:first-child {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+
+/* Animación de entrada */
+@keyframes aparecerToast {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
