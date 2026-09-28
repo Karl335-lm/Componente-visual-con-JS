@@ -54,6 +54,9 @@ Actividad3/
 
 ![Toast](img/Captura%20de%20pantalla%202026-09-28%20004108.png)
 
+##Video
+[▶️ Ver demostración de Componente visual](https://drive.google.com/file/d/1QD1jVyOnj4ck1jLYHEMG1oyMmV79Lt48/view?usp=sharing)
+
 
 ## 👩‍💻 Autora
 
