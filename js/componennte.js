@@ -161,7 +161,7 @@ function mostrarModal(titulo, mensaje) {
  botones.classList.add("modal-botones"); 
  // Botón aceptar 
  const botonAceptar = document.createElement("button"); 
- botonAceptar.textContent = "Aceptar"; 
+ botonAceptar.textContent = "Unirme"; 
  botonAceptar.classList.add( "modal-boton", "modal-aceptar" ); 
  // Botón cerrar 
 const botonCerrar = document.createElement("button"); 
@@ -181,7 +181,7 @@ fondo.appendChild(modal);
 document.body.appendChild(fondo); 
 // Botón aceptar 
 botonAceptar.addEventListener("click", () => { fondo.remove(); 
-    mostrarToast( "✓", "¡Acción realizada correctamente!" ); });
+    mostrarToast( "✓", "¡Gracias por unirte al club, Recibiras màs notificaciones!" ); });
      // Botón cerrar
       botonCerrar.addEventListener("click", () => { fondo.remove(); });
        // Cerrar al hacer clic fuera
